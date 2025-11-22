@@ -1,4 +1,9 @@
 import logging
+import os
+import certifi
+
+# Fix SSL issue on Mac
+os.environ["SSL_CERT_FILE"] = certifi.where()
 
 from dotenv import load_dotenv
 from livekit.agents import (
