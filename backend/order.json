@@ -1,0 +1,9 @@
+{
+  "drinkType": "Espresso",
+  "size": "Medium",
+  "milk": "None",
+  "extras": [
+    "Sugar"
+  ],
+  "name": "Rintu"
+}

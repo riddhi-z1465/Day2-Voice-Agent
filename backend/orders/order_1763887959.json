@@ -1,0 +1,9 @@
+{
+  "drinkType": "Cappuccino",
+  "size": "Small",
+  "milk": "Soy",
+  "extras": [
+    "Sugar"
+  ],
+  "name": "Riddi"
+}
