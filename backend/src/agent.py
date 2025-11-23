@@ -31,6 +31,7 @@ logger = logging.getLogger("agent")
 load_dotenv(".env.local")
 
 import time
+from generate_order_html import generate_html
 
 def save_order_to_file(drinkType: str, size: str, milk: str, extras: List[str], name: str):
     order_data = {
@@ -50,6 +51,11 @@ def save_order_to_file(drinkType: str, size: str, milk: str, extras: List[str], 
     
     with open(filename, "w") as f:
         json.dump(order_data, f, indent=2)
+        
+    # Generate HTML visualization
+    html_filename = f"{orders_dir}/order_{timestamp}.html"
+    generate_html(order_data, html_filename)
+    
     return "Order saved successfully."
 
 class BaristaAgent(Agent):
